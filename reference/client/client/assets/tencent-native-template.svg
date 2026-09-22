@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title description">
+  <title id="title">Fictional team travel advertisement for the Tencent sandbox</title>
+  <desc id="description">A bright local illustration of mountains, tents, and a sunrise. It is a fictional test creative.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3057c8"/>
+      <stop offset="0.58" stop-color="#769be8"/>
+      <stop offset="1" stop-color="#f3b875"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173654"/>
+      <stop offset="1" stop-color="#26726a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#eaf1ff" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="44" fill="url(#sky)"/>
+  <circle cx="760" cy="118" r="66" fill="#ffe69a"/>
+  <circle cx="760" cy="118" r="98" fill="#ffe69a" fill-opacity="0.18"/>
+  <path d="M0 382 190 208l118 112 146-172 184 188 126-116 196 174v146H0z" fill="url(#mountain)"/>
+  <path d="m96 390 122-112 70 70 156-184 62 64-62-30-154 176-76-48-84 82z" fill="#d9f1ef" fill-opacity="0.74"/>
+  <path d="M0 430c142-58 262-49 372 4 118 56 242 54 588-18v124H0z" fill="#12383f"/>
+  <path d="m646 420 68-102 70 102z" fill="#ffcc78" stroke="#fff4d6" stroke-width="8"/>
+  <path d="m714 318 2 102" stroke="#385167" stroke-width="6"/>
+  <path d="M84 72h444a24 24 0 0 1 24 24v222a24 24 0 0 1-24 24H84a24 24 0 0 1-24-24V96a24 24 0 0 1 24-24z" fill="url(#card)"/>
+  <text x="104" y="132" fill="#3157c8" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="24" font-weight="700">腾讯广告 · 本地沙箱素材</text>
+  <text x="104" y="204" fill="#17233c" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="48" font-weight="760">一起去山野</text>
+  <text x="104" y="254" fill="#42526f" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="25">团队行程灵感 · 轻松协作出发</text>
+  <rect x="104" y="284" width="174" height="38" rx="19" fill="#ff8a4c"/>
+  <text x="132" y="310" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="18" font-weight="700">虚构测试广告</text>
+</svg>

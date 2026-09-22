@@ -1,0 +1,596 @@
+.rail {
+  display: flex;
+  min-width: 0;
+  min-height: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px 8px 5px 10px;
+  border-top: 1px solid var(--dsw-alias-state-warn-primary);
+  background: var(--dsw-alias-bg-module-platform);
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.testBadge {
+  flex: none;
+  padding: 1px 5px;
+  border: 1px solid var(--dsw-alias-state-warn-primary);
+  border-radius: 4px;
+  color: var(--dsw-alias-state-warn-label);
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 16px;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.sponsorName {
+  overflow: hidden;
+  min-width: 0;
+  color: var(--dsw-alias-label-secondary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.starter {
+  flex: none;
+  color: var(--dsw-alias-label-tertiary);
+  font-family: var(--ds-font-family-code);
+  white-space: nowrap;
+}
+
+.fundingWarning {
+  overflow: hidden;
+  min-width: 0;
+  color: var(--dsw-alias-state-warn-label);
+  font-size: 10px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nativeBody > .fundingWarning {
+  margin-top: 2px;
+}
+
+.cta,
+.retry {
+  flex: none;
+  min-height: 22px;
+  margin-left: auto;
+  padding: 1px 8px;
+  border: 1px solid var(--dsw-alias-state-warn-primary);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--dsw-alias-state-warn-label);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color var(--ds-transition-duration-fast) var(--ds-ease-in-out),
+    color var(--ds-transition-duration-fast) var(--ds-ease-in-out);
+}
+
+.cta:hover:not(:disabled),
+.retry:hover:not(:disabled) {
+  background: var(--dsw-alias-state-warn-primary);
+  color: var(--dsw-alias-label-primary-foreground);
+}
+
+.cta:focus-visible,
+.retry:focus-visible {
+  outline: 2px solid var(--dsw-alias-state-business-primary);
+  outline-offset: 2px;
+}
+
+.cta:disabled,
+.retry:disabled {
+  cursor: default;
+  opacity: 0.56;
+}
+
+.videoCard {
+  overflow: hidden;
+  border-top: 1px solid var(--dsw-alias-state-warn-primary);
+  background: var(--dsw-alias-bg-layer-2);
+  color: var(--dsw-alias-label-primary);
+}
+
+.videoStage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 6;
+  min-height: 144px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--dsw-alias-bg-layer-1) 94%, transparent),
+    color-mix(in srgb, var(--dsw-alias-bg-layer-1) 48%, transparent) 58%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.videoTopline {
+  position: absolute;
+  inset: 10px 12px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--dsw-alias-label-secondary);
+  font-family: var(--ds-font-family-code);
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.videoCopy {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  display: flex;
+  max-width: 66%;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateY(-50%);
+}
+
+.videoCopy strong {
+  font-size: 16px;
+  font-weight: 660;
+  line-height: 23px;
+}
+
+.videoCopy span {
+  color: var(--dsw-alias-label-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.videoReward {
+  position: absolute;
+  right: 12px;
+  bottom: 13px;
+  padding: 3px 7px;
+  border: 1px solid var(--dsw-alias-state-warn-primary);
+  border-radius: 5px;
+  background: var(--dsw-alias-bg-layer-1);
+  color: var(--dsw-alias-state-warn-label);
+  font-family: var(--ds-font-family-code);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 18px;
+}
+
+.progressTrack {
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: var(--dsw-alias-border-l1);
+}
+
+.progressTrack span {
+  display: block;
+  height: 100%;
+  background: var(--dsw-alias-state-warn-primary);
+  transition: width 160ms linear;
+}
+
+.disclosure {
+  margin: 0;
+  padding: 5px 10px 6px;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.nativeLoading {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 11px;
+  border-top: 1px solid var(--dsw-alias-state-warn-primary);
+  background: var(--dsw-alias-bg-module-platform);
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.nativeCard {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  min-height: 150px;
+  grid-template-columns: minmax(130px, 34%) minmax(0, 1fr);
+  border-top: 1px solid var(--dsw-alias-state-warn-primary);
+  background: var(--dsw-alias-bg-layer-2);
+  color: var(--dsw-alias-label-primary);
+}
+
+.nativeVisual {
+  position: relative;
+  overflow: hidden;
+  min-height: 132px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.nativeVisual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nativeAdBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 6px;
+  border: 1px solid color-mix(in srgb, var(--dsw-alias-state-warn-primary) 72%, transparent);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--dsw-alias-bg-layer-1) 88%, transparent);
+  color: var(--dsw-alias-state-warn-label);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+}
+
+.nativeBody {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 12px 13px 27px;
+}
+
+.nativeTopline,
+.nativeFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nativeTopline {
+  color: var(--dsw-alias-label-tertiary);
+  font-family: var(--ds-font-family-code);
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.nativeTopline strong {
+  color: var(--dsw-alias-state-warn-label);
+  font-weight: 650;
+}
+
+.nativeAdvertiser {
+  margin-top: 9px;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.nativeBody h4 {
+  margin: 2px 0 0;
+  font-size: 15px;
+  font-weight: 660;
+  line-height: 22px;
+}
+
+.nativeBody p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 3px 0 11px;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 17px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.nativeFooter {
+  margin-top: auto;
+  color: var(--dsw-alias-state-warn-label);
+  font-family: var(--ds-font-family-code);
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 16px;
+}
+
+.quoteSummary {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+  padding: 6px 8px;
+  border: 1px solid color-mix(in srgb, var(--dsw-alias-state-warn-primary) 42%, transparent);
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--dsw-alias-state-warn-primary) 7%, transparent);
+  color: var(--dsw-alias-label-secondary);
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.quoteSummary[data-compact='true'] {
+  flex: 1 1 330px;
+  padding-block: 3px;
+}
+
+.quoteSummary strong,
+.quoteReward {
+  color: var(--dsw-alias-state-warn-label);
+  font-family: var(--ds-font-family-code);
+  font-weight: 650;
+}
+
+.quoteLabel {
+  color: var(--dsw-alias-label-primary);
+  font-weight: 600;
+}
+
+.quoteSummary small {
+  width: 100%;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.videoCard > .quoteSummary {
+  margin: 6px 9px 0;
+}
+
+.nativeBody > .quoteSummary {
+  margin: 0 0 7px;
+}
+
+.grantLifecycle {
+  display: flex;
+  width: 100%;
+  flex-basis: 100%;
+  align-items: center;
+  gap: 5px;
+  margin: 3px 0;
+  padding: 0;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 9px;
+  line-height: 14px;
+  list-style: none;
+
+  /* On narrow layouts this rail scrolls inside the elevated ad card. Rebind
+     the inherited scrollbar indirection to that surface's l2 tokens. */
+  --dsh-scrollbar-thumb: var(--dsw-alias-scrollbar-bg-l2);
+  --dsh-scrollbar-thumb-hover: var(--dsw-alias-scrollbar-hover-l2);
+}
+
+.grantLifecycle li {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.grantLifecycle li:not(:last-child)::after {
+  width: 12px;
+  height: 1px;
+  margin-left: 1px;
+  background: var(--dsw-alias-border-l1);
+  content: '';
+}
+
+.grantLifecycle li > span {
+  display: inline-grid;
+  width: 14px;
+  height: 14px;
+  flex: none;
+  place-items: center;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 50%;
+  font-family: var(--ds-font-family-code);
+  font-size: 8px;
+}
+
+.grantLifecycle li[data-complete='true'] {
+  color: var(--dsw-alias-state-success-label);
+}
+
+.grantLifecycle li[data-complete='true'] > span {
+  border-color: var(--dsw-alias-state-success-primary);
+}
+
+.nativeBody > .grantLifecycle {
+  overflow: hidden;
+  margin: 0 0 8px;
+}
+
+.nativeButton {
+  padding: 2px 6px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 4px;
+  color: var(--dsw-alias-label-secondary);
+  font-family: var(--ds-font-family-ui);
+  font-weight: 500;
+}
+
+.nativeDisclosure {
+  position: absolute;
+  inset: auto 0 3px;
+  margin: 0;
+  padding: 3px 10px;
+  background: color-mix(in srgb, var(--dsw-alias-bg-layer-1) 92%, transparent);
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.rewardRail {
+  color: var(--dsw-alias-state-success-label);
+}
+
+.rewardMark {
+  display: inline-grid;
+  width: 16px;
+  height: 16px;
+  flex: none;
+  place-items: center;
+  border: 1px solid var(--dsw-alias-state-success-primary);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.simulated {
+  margin-left: auto;
+  color: var(--dsw-alias-label-tertiary);
+  white-space: nowrap;
+}
+
+.receiptDetails {
+  flex: none;
+  margin-left: auto;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.receiptDetails summary {
+  border-radius: 4px;
+  color: var(--dsw-alias-label-secondary);
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 18px;
+  list-style-position: inside;
+}
+
+.receiptDetails summary:focus-visible {
+  outline: 2px solid var(--dsw-alias-state-business-primary);
+  outline-offset: 2px;
+}
+
+.receiptDetails[open] {
+  width: 100%;
+  flex-basis: 100%;
+  margin-left: 0;
+  padding-top: 6px;
+  border-top: 1px solid var(--dsw-alias-border-l1);
+}
+
+.receiptDetails dl {
+  display: grid;
+  margin: 7px 0 2px;
+  gap: 7px 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.receiptDetails dl > div {
+  min-width: 0;
+}
+
+.receiptDetails dt {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.receiptDetails dd {
+  overflow: hidden;
+  margin: 1px 0 0;
+  color: var(--dsw-alias-label-primary);
+  font-family: var(--ds-font-family-code);
+  font-size: 10px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pulse {
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--dsw-alias-state-warn-primary);
+  animation: sponsor-pulse 1s ease-in-out infinite alternate;
+}
+
+.errorRail {
+  color: var(--dsw-alias-state-error-primary);
+}
+
+.errorRail .retry {
+  border-color: var(--dsw-alias-state-error-primary);
+  color: var(--dsw-alias-state-error-primary);
+}
+
+@keyframes sponsor-pulse {
+  from { opacity: 0.35; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 620px) {
+  .rail {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .starter {
+    display: none;
+  }
+
+  .cta {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .videoStage {
+    aspect-ratio: 16 / 9;
+  }
+
+  .videoCopy {
+    max-width: 82%;
+  }
+
+  .nativeCard {
+    grid-template-columns: 116px minmax(0, 1fr);
+  }
+
+  .nativeDisclosure {
+    position: static;
+    grid-column: 1 / -1;
+  }
+
+  .receiptDetails dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grantLifecycle {
+    overflow-x: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta,
+  .retry,
+  .progressTrack span {
+    transition: none;
+  }
+
+  .pulse {
+    animation: none;
+  }
+}
